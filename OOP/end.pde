@@ -1,0 +1,7 @@
+class End
+{
+  void draw()
+  {
+  }
+  
+}
