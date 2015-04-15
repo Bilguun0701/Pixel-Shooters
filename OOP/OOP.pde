@@ -12,6 +12,7 @@ Keyboard Keyboard;
 
 PImage htpbg;
 PImage endbg;
+PImage bg;
 PFont f;
 
 void setup()
@@ -28,6 +29,7 @@ void setup()
   Keyboard = new Keyboard();
   htpbg = loadImage("instbg.jpg");
   endbg = loadImage("endbg.jpg");
+  bg = loadImage("bg.jpg");
 }
 
 int screen = 0;
@@ -39,6 +41,7 @@ void draw()
 {
   if (screen == 0)
   {
+    background(bg);
     Menu.draw();
   }
   else if(screen == 1)

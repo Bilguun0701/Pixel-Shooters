@@ -4,7 +4,6 @@ class Menu
   
   void draw()
   {
-    background(255);
     fill(255,255,0);
     stroke(255,255,0);
     rect(285, 295, 240, 200);
