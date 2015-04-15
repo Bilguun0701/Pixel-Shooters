@@ -3,6 +3,8 @@
 
 Player Player1;
 Player Player2;
+Stage1 stage1;
+
 Menu Menu;
 Instruction Instruction;
 End End;
@@ -11,13 +13,15 @@ Keyboard Keyboard;
 PImage htpbg;
 PImage endbg;
 PFont f;
+
 void setup()
 {
   size(800,600);
   smooth();
   f = createFont("Arial",16,true);
-  Player1 = new Player(10,500,130); //Player Starting X , Y , Color
-  Player2 = new Player(690,500,200);
+  stage1= new Stage1();
+  Player1 = new Player(10, 500, color(255,0,0)); //Player Starting X , Y , Color
+  Player2 = new Player(690, 500, color(0,0,255));
   Menu = new Menu();
   Instruction = new Instruction();
   End = new End();
@@ -45,8 +49,7 @@ void draw()
     Player1.showPlayer(); //Draws the player on screen
     Player2.showPlayer();
     
-    fill(0);
-    rect(0,600,1600,30);
+    stage1.draw();
     Player1.collision1();
     Player2.collision2();
     stroke (1);
