@@ -9,6 +9,7 @@ Menu Menu;
 Instruction Instruction;
 End End;
 Keyboard Keyboard;
+Hp Hp;
 
 PImage htpbg;
 PImage end1bg;
@@ -30,6 +31,7 @@ void setup()
   Credit = new Credit();
   End = new End();
   Keyboard = new Keyboard();
+  Hp = new Hp();
   htpbg = loadImage("instbg.jpg");
   end1bg = loadImage("end1bg.jpg");
   end2bg = loadImage("end2bg.jpg");
@@ -41,9 +43,9 @@ void setup()
 int screen = 0;
 int j1 = 0;
 int j2 = 0;
-int hp1 = 20;
-int hp2 = 20;
-
+float hp1 = 350;
+float hp2 = 350;
+float player1hp; 
 
 void draw()
 {
@@ -55,6 +57,9 @@ void draw()
   else if(screen == 1)
   {
     background(255);
+    player1hp = 370; 
+    player1hp = player1hp-hp1;
+    Hp.draw();
     Player1.updatePlayer1(); //Updates movements of player each frame
     Player2.updatePlayer2();
     Player1.showPlayer(); //Draws the player on screen
