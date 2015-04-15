@@ -20,8 +20,8 @@ void setup()
   smooth();
   f = createFont("Arial",16,true);
   stage1= new Stage1();
-  Player1 = new Player(10, 500, color(255,0,0)); //Player Starting X , Y , Color
-  Player2 = new Player(690, 500, color(0,0,255));
+  Player1 = new Player(20, 500, color(255,0,0)); //Player Starting X , Y , Color
+  Player2 = new Player(700, 400, color(0,0,255));
   Menu = new Menu();
   Instruction = new Instruction();
   End = new End();
