@@ -1,6 +1,7 @@
 //2-D two player mortal kombat style shooter. Assignment 3 for OOP.
 import ddf.minim.*;
 
+Object Object;
 Minim minim;
 AudioPlayer player;
 Player Player1;
@@ -28,6 +29,7 @@ void setup()
   player = minim.loadFile("GameSong.mp3");
   player.play();
   f = createFont("Arial",16,true);
+  Object = new Object(random(20, 780),random(50, 570));
   stage1= new Stage1();
   Player1 = new Player(20, 500, color(255,0,0)); //Player Starting X , Y , Color
   Player2 = new Player(700, 400, color(0,0,255));
@@ -65,16 +67,17 @@ void draw()
     player1hp = 370; 
     player1hp = player1hp-hp1;
     Hp.draw();
+    Object.updateObject();
     Player1.updatePlayer1(); //Updates movements of player each frame
     Player2.updatePlayer2();
     Player1.showPlayer(); //Draws the player on screen
     Player2.showPlayer();
-    
     stage1.draw();
     Player1.collision1();
     Player2.collision2();
+    Object.collision();
     stroke (1);
-    if (hp1 <= 0 || hp2 <= 0)
+    if (hp1 == 0 || hp2 == 0)
     {
       screen = 4;
       rectMode(CORNER);
