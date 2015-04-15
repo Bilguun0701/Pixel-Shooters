@@ -68,7 +68,7 @@ class Menu
         stroke = 0;
         fill(255,255,0);
         stroke(stroke);
-        rect(300,403,210,30);
+        rect(300,403,130,30);
         if (mousePressed == true)
         {
           screen = 3;
@@ -84,7 +84,7 @@ class Menu
       stroke = 255;
     }
     fill(0);
-    text("HIGH SCORE",310,430);
+    text("CREDIT",310,430);
     
     if(mouseX > 300 && mouseX < 380)
     {

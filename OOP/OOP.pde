@@ -4,7 +4,7 @@
 Player Player1;
 Player Player2;
 Stage1 stage1;
-
+Credit Credit;
 Menu Menu;
 Instruction Instruction;
 End End;
@@ -26,6 +26,7 @@ void setup()
   Player2 = new Player(700, 400, color(0,0,255));
   Menu = new Menu();
   Instruction = new Instruction();
+  Credit = new Credit();
   End = new End();
   Keyboard = new Keyboard();
   htpbg = loadImage("instbg.jpg");
@@ -75,7 +76,8 @@ void draw()
   }
   else if(screen == 3)
   {
-    
+    background(0);
+    Credit.draw(); 
   }
   else if (screen == 4)
   {
