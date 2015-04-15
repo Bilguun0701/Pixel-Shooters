@@ -7,20 +7,20 @@ class Menu
     background(255);
     fill(255,255,0);
     stroke(255,255,0);
-    rect(390, 365, 244, 200);
+    rect(285, 295, 240, 200);
     stroke = 255;
     
     textFont(f,30);
     textAlign(LEFT);
     
-    if(mouseX > 400 && mouseX < 510)
+    if(mouseX > 300 && mouseX < 410)
     {
-      if(mouseY > 375 && mouseY < 405)
+      if(mouseY > 300 && mouseY < 330)
       {
         stroke = 0;
         fill(255,255,0);
         stroke(stroke);
-        rect(400,375,110,30);
+        rect(300,303,110,30);
         if (mousePressed == true)
         {
           screen = 1;
@@ -36,16 +36,16 @@ class Menu
       stroke = 255;
     }
     fill(0);
-    text("START",410,400);
+    text("START",310,330);
     
-    if(mouseX > 400 && mouseX < 600)
+    if(mouseX > 300 && mouseX < 500)
     {
-      if(mouseY > 425 && mouseY < 455)
+      if(mouseY > 350 && mouseY < 380)
       {
         stroke = 0;
         fill(255,255,0);
         stroke(stroke);
-        rect(400,425,220,30);
+        rect(300,353,220,30);
         if (mousePressed == true)
         {
           screen = 2;
@@ -61,15 +61,15 @@ class Menu
       stroke = 255;
     }
     fill(0);
-    text("HOW TO PLAY",410,450);
-    if(mouseX > 400 && mouseX < 600)
+    text("HOW TO PLAY",310,380);
+    if(mouseX > 300 && mouseX < 500)
     {
-      if(mouseY > 475 && mouseY < 505)
+      if(mouseY > 400 && mouseY < 430)
       {
         stroke = 0;
         fill(255,255,0);
         stroke(stroke);
-        rect(400,475,210,30);
+        rect(300,403,210,30);
         if (mousePressed == true)
         {
           screen = 3;
@@ -85,16 +85,16 @@ class Menu
       stroke = 255;
     }
     fill(0);
-    text("HIGH SCORE",410,500);
+    text("HIGH SCORE",310,430);
     
-    if(mouseX > 400 && mouseX < 480)
+    if(mouseX > 300 && mouseX < 380)
     {
-      if(mouseY > 525 && mouseY < 555)
+      if(mouseY > 450 && mouseY < 480)
       {
         stroke = 0;
         fill(255,255,0);
         stroke(stroke);
-        rect(400,525,80,30);
+        rect(300,453,80,30);
         if (mousePressed == true)
         {
           exit();
@@ -110,6 +110,6 @@ class Menu
       stroke = 255;
     }
     fill(0);
-    text("EXIT",410,550);
+    text("EXIT",310,480);
   }
 }
