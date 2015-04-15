@@ -11,7 +11,8 @@ End End;
 Keyboard Keyboard;
 
 PImage htpbg;
-PImage endbg;
+PImage end1bg;
+PImage end2bg;
 PImage bg;
 PFont f;
 
@@ -28,13 +29,17 @@ void setup()
   End = new End();
   Keyboard = new Keyboard();
   htpbg = loadImage("instbg.jpg");
-  endbg = loadImage("endbg.jpg");
+  end1bg = loadImage("end1bg.jpg");
+  end2bg = loadImage("end2bg.jpg");
   bg = loadImage("bg.jpg");
+  
 }
 
 int screen = 0;
 int j1 = 0;
 int j2 = 0;
+int hp1 = 20;
+int hp2 = 20;
 
 
 void draw()
@@ -56,6 +61,11 @@ void draw()
     Player1.collision1();
     Player2.collision2();
     stroke (1);
+    if (hp1 == 0 || hp2 == 0)
+    {
+      screen = 4;
+      rectMode(CORNER);
+    }
     
   }
   else if(screen == 2)
@@ -69,7 +79,7 @@ void draw()
   }
   else if (screen == 4)
   {
-    background(endbg);
+    
     End.draw();
   }
 }
