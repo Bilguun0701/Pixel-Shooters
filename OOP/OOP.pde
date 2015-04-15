@@ -1,4 +1,4 @@
-//2-D two player mortal kombat style shooter. Assignment 3 for OOP.
+//2-D two player game where the aim is to collect the green box faster than the other player. Assignment 3 for OOP.
 import ddf.minim.*;
 
 Object Object;
