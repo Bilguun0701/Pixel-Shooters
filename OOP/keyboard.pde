@@ -1,12 +1,11 @@
 class Keyboard
 {
-  boolean Player1Left , Player1Right , Player1Up , Player1Down , Player1Shoot , Player1Turn;
-  boolean Player2Left , Player2Right , Player2Up , Player2Down , Player2Shoot , Player2Turn;
-  
+  boolean Player1Left , Player1Right , Player1Up;
+  boolean Player2Left , Player2Right , Player2Up;
   Keyboard()
   {
-    Player1Left=Player1Right=Player1Up=Player1Down=Player1Shoot=Player1Turn=false;
-    Player2Left=Player2Right=Player2Up=Player2Down=Player2Shoot=Player2Turn=false;
+    Player1Left=Player1Right=Player1Up=false;
+    Player2Left=Player2Right=Player2Up=false;
   }
   
   void pressedKey(int keyCode)

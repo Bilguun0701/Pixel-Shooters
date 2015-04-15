@@ -1,6 +1,8 @@
 //2-D two player mortal kombat style shooter. Assignment 3 for OOP.
+import ddf.minim.*;
 
-
+Minim minim;
+AudioPlayer player;
 Player Player1;
 Player Player2;
 Stage1 stage1;
@@ -22,6 +24,9 @@ void setup()
 {
   size(800,600);
   smooth();
+  minim = new Minim(this);
+  player = minim.loadFile("GameSong.mp3");
+  player.play();
   f = createFont("Arial",16,true);
   stage1= new Stage1();
   Player1 = new Player(20, 500, color(255,0,0)); //Player Starting X , Y , Color
