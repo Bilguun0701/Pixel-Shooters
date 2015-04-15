@@ -74,12 +74,11 @@ void draw()
     Player1.collision1();
     Player2.collision2();
     stroke (1);
-    if (hp1 == 0 || hp2 == 0)
+    if (hp1 <= 0 || hp2 <= 0)
     {
       screen = 4;
       rectMode(CORNER);
     }
-    
   }
   else if(screen == 2)
   {

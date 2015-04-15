@@ -3,11 +3,11 @@ class End
   int pointer;
   void draw()
   {
-    if(hp2 == 0)
+    if(hp2 < 0)
     {
       background(end1bg);
     }
-    else if(hp1 == 0)
+    else if(hp1 < 0)
     {
       background(end2bg);
     }
