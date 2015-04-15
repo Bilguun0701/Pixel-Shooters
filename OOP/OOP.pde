@@ -14,6 +14,7 @@ PImage htpbg;
 PImage end1bg;
 PImage end2bg;
 PImage bg;
+PImage creditbg;
 PFont f;
 
 void setup()
@@ -33,6 +34,7 @@ void setup()
   end1bg = loadImage("end1bg.jpg");
   end2bg = loadImage("end2bg.jpg");
   bg = loadImage("bg.jpg");
+  creditbg = loadImage("credit.jpg");
   
 }
 
@@ -76,7 +78,7 @@ void draw()
   }
   else if(screen == 3)
   {
-    background(0);
+    background(creditbg);
     Credit.draw(); 
   }
   else if (screen == 4)
