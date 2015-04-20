@@ -6,10 +6,14 @@ class End
     if(hp2 == 0)
     {
       background(end1bg);
+      hp1 = 350;
+      hp2 = 350;
     }
     else if(hp1 == 0)
     {
       background(end2bg);
+      hp1 = 350;
+      hp2 = 350;
     }
     
      textFont(f,30);
